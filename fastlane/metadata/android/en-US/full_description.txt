@@ -1,0 +1,19 @@
+Janken is a beautifully designed, modern, privacy-first Rock-Paper-Scissors and RPSLS game for Android, built natively with Jetpack Compose.
+
+Whether you are settling a debate with a friend or sharpening your mind against adaptive AI, Janken delivers an exquisite, fluid, and delightful experience.
+
+✨ Key Features
+
+• 🤖 vs Computer (Smart Bot AI): Play against 3 distinct difficulties (Easy, Medium, Hard). The Hard AI analyzes your patterns with Markov chains to counter your tendencies!
+• 👥 Pass & Play (Local 2-Player): Play with a friend on a single phone with true privacy! Player 1 chooses a move which is instantly locked and shielded before handing the phone over to Player 2.
+• ⚡ Quick Decision Mode: Solve everyday dilemmas instantly — "Who gets the last slice of pizza?", "Who pays for coffee?", "Who takes out the trash?"
+• 🦎 Rock-Paper-Scissors-Lizard-Spock (RPSLS): Expand your battles with the classic 5-move variant! Includes an interactive visual rules cheat sheet.
+• 📊 In-Depth Statistics & Match Logs: Track your win rates, winning streaks, move distribution breakdown, and review detailed match histories.
+• 🎨 Material 3 Design & Micro-Animations: Fluid animations, dynamic color theming, dark/light modes, confetti celebrations, and tactile haptics.
+• 🔊 Synthesized Audio Effects: Enjoy custom offline synthesized sound chimes and cues with complete volume controls.
+
+🔒 100% Privacy-First & Offline
+
+• Zero Permissions: Janken requires no internet permissions (INTERNET permission is completely omitted).
+• No Ads & No Tracking: Zero analytics, telemetry, or external SDKs.
+• Open Source: Free software licensed under GPL-3.0.

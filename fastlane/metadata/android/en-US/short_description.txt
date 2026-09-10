@@ -1,0 +1,1 @@
+Modern offline Rock Paper Scissors with private Pass & Play, Bot AI and RPSLS.
