@@ -12,7 +12,7 @@
 
 **Janken** is a modern, privacy-first, fully offline Rock-Paper-Scissors and RPSLS game for Android, crafted with **Jetpack Compose** and **Material 3**.
 
-Designed as a premier F-Droid native utility and game, Janken features a true **local Pass & Play** mode with a privacy screen lock, adaptive **Bot AI** powered by Markov Chain pattern analysis, a **Quick Decision** showdown tool, and full **lifetime statistics**.
+It features a true **local Pass & Play** mode with a privacy screen lock, adaptive **Bot AI** powered by Markov Chain pattern analysis, a **Quick Decision** showdown tool, and full **lifetime statistics**.
 
 ---
 
