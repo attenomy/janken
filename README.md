@@ -16,6 +16,19 @@ Designed as a premier F-Droid native utility and game, Janken features a true **
 
 ---
 
+## 🛍️ Download Now
+
+<div align="center">
+  <a href="https://f-droid.org/packages/com.attenomy.janken/">
+    <img width="197" height="59" alt="F-Droid" src="https://github.com/user-attachments/assets/9a463d23-368b-4974-9686-e28649e00b04" />
+  </a>
+  <a href="https://github.com/attenomy/janken/releases">
+    <img width="197" height="59" alt="GitHub Releases" src="https://github.com/user-attachments/assets/e9ae5d41-fb6c-468b-b1cc-cc4fb534aa10" />
+  </a>
+</div>
+
+---
+
 ## ✨ Features
 
 ### 1. 👥 Pass & Play (Local 2-Player on 1 Phone)
