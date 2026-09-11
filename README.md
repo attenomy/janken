@@ -25,7 +25,7 @@ It features a true **local Pass & Play** mode with a privacy screen lock, adapti
   <a href="https://github.com/attenomy/janken/releases">
     <img width="197" height="59" alt="GitHub Releases" src="https://github.com/user-attachments/assets/e9ae5d41-fb6c-468b-b1cc-cc4fb534aa10" />
   </a>
-</div>
+</div> 
 
 ---
 
