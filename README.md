@@ -150,7 +150,7 @@ If you enjoy using Janken and want to support its continued development, donatio
 ## 👤 Author & Contact
 
 * **Author**: Attenomy
-* **Email**: [contact@attenomy.com](mailto:contact@attenomy.com)
+* **Email**: [janken_app@attenomy.com](mailto:janken_app@attenomy.com)
 * **GitHub**: [@attenomy](https://github.com/attenomy)
 
 ---

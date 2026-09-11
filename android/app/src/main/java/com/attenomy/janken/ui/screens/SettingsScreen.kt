@@ -1,5 +1,8 @@
 package com.attenomy.janken.ui.screens
 
+import android.widget.Toast
+import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -15,6 +18,7 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.VolumeUp
+import androidx.compose.material.icons.filled.ContentCopy
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Palette
 import androidx.compose.material.icons.filled.PrivacyTip
@@ -38,7 +42,12 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.platform.LocalClipboardManager
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.AnnotatedString
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -283,19 +292,21 @@ fun SettingsScreen(
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Bold
                     )
-                    Spacer(modifier = Modifier.height(8.dp))
-                    Text(
-                        text = "BTC: 18PZ4bQv6BqXMVhBArPCgHZ3tHPZkAzCZX",
-                        style = MaterialTheme.typography.bodySmall,
-                        fontWeight = FontWeight.Medium,
-                        color = MaterialTheme.colorScheme.onSurface
-                    )
                     Spacer(modifier = Modifier.height(4.dp))
                     Text(
-                        text = "LTC: Lbwd28b1pVkbF1GAGxafihvkXMrHh8CMcu",
+                        text = "Tap an address to copy:",
                         style = MaterialTheme.typography.bodySmall,
-                        fontWeight = FontWeight.Medium,
-                        color = MaterialTheme.colorScheme.onSurface
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                    Spacer(modifier = Modifier.height(10.dp))
+                    CryptoAddressItem(
+                        currency = "Bitcoin (BTC)",
+                        address = "18PZ4bQv6BqXMVhBArPCgHZ3tHPZkAzCZX"
+                    )
+                    Spacer(modifier = Modifier.height(8.dp))
+                    CryptoAddressItem(
+                        currency = "Litecoin (LTC)",
+                        address = "Lbwd28b1pVkbF1GAGxafihvkXMrHh8CMcu"
                     )
                 }
             }
@@ -320,7 +331,7 @@ fun SettingsScreen(
                         fontWeight = FontWeight.Bold
                     )
                     Text(
-                        text = "By Attenomy • contact@attenomy.com",
+                        text = "By Attenomy • janken_app@attenomy.com",
                         style = MaterialTheme.typography.bodyMedium,
                         fontWeight = FontWeight.Medium,
                         color = PrimaryIndigo
@@ -369,5 +380,51 @@ private fun SettingsSectionCard(
             Spacer(modifier = Modifier.height(14.dp))
             content()
         }
+    }
+}
+
+@Composable
+private fun CryptoAddressItem(
+    currency: String,
+    address: String
+) {
+    val clipboardManager = LocalClipboardManager.current
+    val context = LocalContext.current
+
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(12.dp))
+            .background(MaterialTheme.colorScheme.surface.copy(alpha = 0.6f))
+            .clickable {
+                clipboardManager.setText(AnnotatedString(address))
+                Toast.makeText(context, "$currency address copied!", Toast.LENGTH_SHORT).show()
+            }
+            .padding(horizontal = 12.dp, vertical = 10.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.SpaceBetween
+    ) {
+        Column(modifier = Modifier.weight(1f)) {
+            Text(
+                text = currency,
+                style = MaterialTheme.typography.labelMedium,
+                fontWeight = FontWeight.Bold,
+                color = PrimaryIndigo
+            )
+            Spacer(modifier = Modifier.height(2.dp))
+            Text(
+                text = address,
+                style = MaterialTheme.typography.bodySmall.copy(fontFamily = FontFamily.Monospace),
+                fontSize = 11.sp,
+                color = MaterialTheme.colorScheme.onSurface
+            )
+        }
+        Spacer(modifier = Modifier.width(8.dp))
+        Icon(
+            imageVector = Icons.Default.ContentCopy,
+            contentDescription = "Copy $currency Address",
+            tint = MaterialTheme.colorScheme.onSurfaceVariant,
+            modifier = Modifier.padding(4.dp)
+        )
     }
 }
