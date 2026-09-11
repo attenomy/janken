@@ -7,7 +7,7 @@
 [![Privacy First](https://img.shields.io/badge/Privacy-100%25%20Offline%20%7C%20Zero%20Permissions-brightgreen.svg)](#privacy--f-droid-philosophy)
 
 <p align="center">
-  <img src="fastlane/metadata/android/en-US/icon.png" width="128" height="128" alt="Janken Icon" />
+  <img src="fastlane/metadata/android/en-US/images/icon.png" width="128" height="128" alt="Janken Icon" />
 </p>
 
 **Janken** is a modern, privacy-first, fully offline Rock-Paper-Scissors and RPSLS game for Android, crafted with **Jetpack Compose** and **Material 3**.
