@@ -1,9 +1,9 @@
-AuthorName: Attenomy
-AuthorEmail: janken_app@attenomy.com
 Categories:
   - Casual Game
   - Party Game
 License: GPL-3.0-only
+AuthorName: Attenomy
+AuthorEmail: janken_app@attenomy.com
 SourceCode: https://github.com/attenomy/janken
 IssueTracker: https://github.com/attenomy/janken/issues
 Donate: https://buymeacoffee.com/saad1inc
